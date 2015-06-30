@@ -6,6 +6,13 @@
 
 using namespace::std;
 
+class Node {
+public:
+	Node() {}
+	Node *next;
+	int data;
+};
+
 int _tmain(int argc, _TCHAR* argv[])
 {
 	cout << "Hello World!" << endl;
