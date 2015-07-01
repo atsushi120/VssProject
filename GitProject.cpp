@@ -24,6 +24,10 @@ public:
 			root = new Node(val);
 		}
 	}
+
+	deleteNode(int val) {
+
+	}
 };
 
 int _tmain(int argc, _TCHAR* argv[])
