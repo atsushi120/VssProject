@@ -10,9 +10,20 @@ using namespace::std;
 
 class Node {
 public:
-	Node() {}
+	Node() : next(nullptr), data(0) {}
+	Node(int val) : next(nullptr), data(val) {}
 	Node *next;
 	int data;
+};
+
+class List {
+	Node* root;
+public:
+	addNode(int val) {
+		if (root == nullptr) {
+			root = new Node(val);
+		}
+	}
 };
 
 int _tmain(int argc, _TCHAR* argv[])
