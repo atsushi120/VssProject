@@ -19,14 +19,29 @@ public:
 class List {
 	Node* root;
 public:
-	addNode(int val) {
+	void addNode(int val) {
 		if (root == nullptr) {
 			root = new Node(val);
 		}
 	}
 
-	deleteNode(int val) {
-
+	void deleteNode(int val) {
+		if (root->data == val) {
+			Node* tmp = root;
+			root = root->next;
+			delete root;
+		}
+		else {
+			Node* node = root;
+			while (node->next != nullptr) {
+				if (node->next->data == val) {
+					Node* tmp = node->next;
+					node->next = node->next->next;
+					delete tmp;
+				}
+				node = node->next;
+			}
+		}
 	}
 };
 
