@@ -19,6 +19,10 @@ public:
 class List {
 	Node* root;
 public:
+
+	List(Node* nd) : root(nd) {}
+	List() : root(nullptr) {}
+
 	void addNode(int val) {
 		if (root == nullptr) {
 			root = new Node(val);
