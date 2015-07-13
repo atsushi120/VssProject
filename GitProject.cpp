@@ -23,6 +23,21 @@ public:
 	List(Node* nd) : root(nd) {}
 	List() : root(nullptr) {}
 
+	Node* searchNode(int val) {
+		if (root->data == val)
+			return root;
+		else {
+			Node* node = root;
+			while (node->next != nullptr) {
+				if (node->next->data == val) {
+					return node;
+				}
+				node = node->next;
+			}
+			return nullptr;
+		}
+	}
+
 	void addNode(int val) {
 		if (root == nullptr) {
 			root = new Node(val);
